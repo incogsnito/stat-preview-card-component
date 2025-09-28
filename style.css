@@ -1,93 +1,133 @@
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: content-box;
 }
 
-@font-face{
+@font-face {
   font-family: "Inter";
-  src: url("./Inter,Lexend_Deca/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("./Inter,Lexend_Deca/Inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Lexend";
-  src: url("./Inter,Lexend_Deca/Lexend_Deca/LexendDeca-VariableFont_wght.ttf") format("truetype");
+  src: url("./Inter,Lexend_Deca/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-family: "Lexend";
-  background:hsl(233, 47%, 7%);
+  background: hsl(233, 47%, 7%);
   color: white;
   text-align: center;
   line-height: 1.3;
   transition: all 0.5s ease-in-out;
 }
 
-p{
+p {
   font-size: 0.9375rem;
-  margin: 0 
+  margin: 0;
 }
 
-span{
-  color:hsl(277, 64%, 61%);
-}
-
-.hero{
-  max-width: 400px;
-  background:hsl(244, 37%, 16%);
-  border-radius: 7px;
-}
-
-.hero h2{
-  font-size: 2rem;
-  font-family: "Lexend";
-  transition: 0.25s linear;
-}
-
-.hero h2:hover{
-  color:hsl(277, 64%, 61%);
-  cursor: pointer;
-}
-
-.hero p{
-  color:hsla(0, 0%, 100%, 0.75);
-}
-
-.hero ul{
-  list-style-type: none;
-  padding: 0;
-  font-size: 2rem;
-}
-
-.proof p{
-  margin-bottom: 0.7em;
-}
-
-.hero li{
-  font-weight: bold;
-  font-family: "Lexend"
-}
-
-.hero__img{
-  content: url("./stats-preview-card-component-main/images/image-header-mobile.jpg")
-}
-
-.hero__container{
+.hero__container {
   width: 80%;
   margin: 0 auto;
   padding: 1.5em 0;
 }
 
-@media (min-width: 800px){
-  .hero__img{
-    content:url("./stats-preview-card-component-main/images/image-header-desktop.jpg")
-  }
+.hero__container span {
+  color: hsl(277, 64%, 61%);
 }
 
-img{
+.hero {
+  max-width: 400px;
+  background: hsl(244, 37%, 16%);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-family: "Lexend";
+  transition: 0.25s linear;
+}
+
+.hero h2:hover {
+  color: hsl(277, 64%, 61%);
+  cursor: pointer;
+}
+
+.hero p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.hero ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.stats p {
+  margin-bottom: 0.7em;
+}
+
+.hero li {
+  font-weight: bold;
+  font-family: "Lexend";
+}
+
+.hero__img {
+  content: url("./stats-preview-card-component-main/images/image-header-mobile.jpg");
+}
+
+img {
   max-width: 100%;
+}
+
+
+.stats span {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    max-height: 500px;
+  }
+
+  .hero__container {
+    padding: 2em 1em;
+    margin-right: 4em;
+    text-align: left;
+    width: 40%;
+  }
+
+  .hero__img {
+    content: url("./stats-preview-card-component-main/images/image-header-desktop.jpg");
+    max-width: 50%;
+    padding: 0;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .stats li {
+    display: flex;
+    flex-direction: column;
+  }
 }
